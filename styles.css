@@ -26,7 +26,52 @@ body {
 .hero {
   min-height: 100vh;
   padding: 24px 48px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(246, 238, 231, 0.85) 40%, rgba(239, 227, 215, 0.95) 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -120px;
+  left: -60px;
+  width: 320px;
+  height: 420px;
+  border-radius: 50%;
+  border: 6px solid var(--gold);
+  background: transparent;
+  opacity: 1;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(1.1) contrast(1.15) saturate(1.1);
 }
 
 .topbar {
@@ -34,6 +79,8 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
+  position: relative;
+  z-index: 3;
 }
 
 .logo {
@@ -152,6 +199,8 @@ body {
   margin-left: calc(-50vw + 50%);
   padding-left: 48px;
   padding-right: 48px;
+  position: relative;
+  z-index: 3;
 }
 
 .left {
@@ -289,97 +338,64 @@ body {
 
 /* Diamante - Atendimento Personalizado */
 .feature-diamond .icon {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  filter: drop-shadow(0 0 0 var(--gold));
+  text-shadow: 0 0 0 var(--gold);
 }
 
 .feature-diamond .icon::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 10px;
-  background: var(--gold);
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  content: "💎";
 }
 
 /* Esmalte - Produtos */
-.feature-polish .icon::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10px;
-  height: 12px;
-  background: var(--gold);
-  border-radius: 3px;
+.feature-polish .icon {
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: saturate(0.5) brightness(1.2) hue-rotate(40deg);
 }
 
-.feature-polish .icon::after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 11px;
-  height: 3px;
-  background: var(--gold);
-  border-radius: 2px;
+.feature-polish .icon::before {
+  content: "💅";
 }
 
 /* Escudo - Higiene */
-.feature-shield .icon::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 13px;
-  height: 15px;
-  border: 1.5px solid var(--gold);
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 50%;
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
-  background: transparent;
+.feature-shield .icon {
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: saturate(0.5) brightness(1.2) hue-rotate(40deg);
 }
 
-/* Coração Vazado - Paixão */
+.feature-shield .icon::before {
+  content: "🛡️";
+}
+
+/* Coração - Paixão */
 .feature-heart-outline .icon {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  filter: saturate(0.6) brightness(1.1) hue-rotate(35deg);
 }
 
 .feature-heart-outline .icon::before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 6px;
-  height: 6px;
-  background: transparent;
-  border: 1.2px solid var(--gold);
-  border-radius: 50%;
-}
-
-.feature-heart-outline .icon::after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  right: 1px;
-  width: 6px;
-  height: 6px;
-  background: transparent;
-  border: 1.2px solid var(--gold);
-  border-radius: 50%;
-}
-
-.feature-heart-outline .icon {
-  box-shadow: inset 3px 4px 0 -1px var(--gold);
-  border-radius: 50%;
+  content: "❤️";
 }
 
 .right {
