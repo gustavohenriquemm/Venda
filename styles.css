@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Herr+Von+Muellerhoff&family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+:root {
+  --cream: #f6eee7;
+  --beige: #efe3d7;
+  --sand: #e6d2c2;
+  --gold: #c8a06c;
+  --gold-dark: #a67a45;
+  --text: #3c2f2a;
+  --muted: #7b6b62;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 15% 20%, #fff7f0 0%, var(--cream) 45%, var(--sand) 100%);
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 24px 48px 40px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(246, 238, 231, 0.85) 40%, rgba(239, 227, 215, 0.95) 100%);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--gold);
+  display: grid;
+  place-items: center;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  color: var(--gold-dark);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+
+.logo-text strong {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.logo-text em {
+  font-style: normal;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+  color: var(--text);
+  border-color: var(--gold);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.btn-outline {
+  border: 1px solid var(--gold);
+  color: var(--gold-dark);
+  background: transparent;
+}
+
+.btn-primary {
+  margin-top: 24px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+  color: var(--white);
+  box-shadow: 0 8px 20px rgba(166, 122, 69, 0.25);
+}
+
+.btn-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  color: var(--white);
+}
+
+.btn-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hero-content {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.3fr;
+  gap: 32px;
+  align-items: center;
+  padding-bottom: 0;
+  border-bottom: 4px solid var(--gold);
+  background: linear-gradient(to bottom, transparent 0%, transparent calc(100% - 4px), var(--gold) calc(100% - 4px), var(--gold) 100%);
+  background-size: 100vw 100%;
+  background-position: 0 0;
+  background-attachment: fixed;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding-left: 48px;
+  padding-right: 48px;
+}
+
+.left {
+  max-width: 560px;
+  text-align: center;
+  justify-self: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero-title {
+  margin: 12px 0 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1.1;
+  position: relative;
+  padding-bottom: 0;
+}
+
+.hero-title .title {
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero-title .script {
+  display: block;
+  font-family: "Herr Von Muellerhoff", cursive;
+  font-size: 72px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  margin-top: -12px;
+  font-weight: 400;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 18px auto 8px;
+}
+
+.divider .line {
+  width: 140px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+}
+
+.divider .heart {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  transform: rotate(-45deg);
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+}
+
+.divider .heart::before,
+.divider .heart::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+}
+
+.divider .heart::before {
+  top: -6px;
+  left: 0;
+}
+
+.divider .heart::after {
+  left: 6px;
+  top: 0;
+}
+
+.subtitle {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 420px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  font-size: 11px;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.feature {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+.feature p {
+  line-height: 1.3;
+  margin: 0;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
+  min-height: 24px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Diamante - Atendimento Personalizado */
+.feature-diamond .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.feature-diamond .icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background: var(--gold);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+/* Esmalte - Produtos */
+.feature-polish .icon::before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 12px;
+  background: var(--gold);
+  border-radius: 3px;
+}
+
+.feature-polish .icon::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 11px;
+  height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+}
+
+/* Escudo - Higiene */
+.feature-shield .icon::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 13px;
+  height: 15px;
+  border: 1.5px solid var(--gold);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  background: transparent;
+}
+
+/* Coração Vazado - Paixão */
+.feature-heart-outline .icon {
+  width: 18px;
+  height: 18px;
+}
+
+.feature-heart-outline .icon::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  border: 1.2px solid var(--gold);
+  border-radius: 50%;
+}
+
+.feature-heart-outline .icon::after {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 6px;
+  height: 6px;
+  background: transparent;
+  border: 1.2px solid var(--gold);
+  border-radius: 50%;
+}
+
+.feature-heart-outline .icon {
+  box-shadow: inset 3px 4px 0 -1px var(--gold);
+  border-radius: 50%;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-start;
+  margin-top: -150px;
+}
+
+.image-wrap {
+  position: relative;
+  width: min(700px, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 550px;
+}
+
+.image-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .topbar {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .features {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero {
+    padding: 20px 20px 32px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 44px;
+  }
+
+  .hero-title .script {
+    font-size: 44px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .image-wrap {
+    width: 320px;
+  }
+}
