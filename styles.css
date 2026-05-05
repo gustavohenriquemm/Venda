@@ -1086,7 +1086,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1.1fr;
   gap: 80px;
-  align-items: start;
+  align-items: center;
 }
 
 .contact-left {
@@ -1095,7 +1095,7 @@ body {
 }
 
 .contact-header {
-  margin-bottom: 60px;
+  margin-bottom: 32px;
   text-align: center;
 }
 
@@ -1173,8 +1173,8 @@ body {
 .contact-cards-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 56px;
+  gap: 28px;
+  margin-bottom: 28px;
 }
 
 .contact-card {
@@ -1182,8 +1182,8 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  padding: 40px 28px;
+  gap: 10px;
+  padding: 28px 20px;
   background: rgba(255, 255, 255, 0.98);
   border: 1px solid rgba(200, 160, 108, 0.2);
   border-radius: 18px;
@@ -1218,8 +1218,8 @@ body {
 }
 
 .contact-card-icon {
-  width: 64px;
-  height: 64px;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1227,7 +1227,7 @@ body {
   border-radius: 50%;
   color: var(--gold);
   transition: all 0.3s ease;
-  margin-bottom: 2px;
+  margin-bottom: 0;
 }
 
 .contact-card:hover .contact-card-icon {
@@ -1236,8 +1236,8 @@ body {
 }
 
 .contact-card-icon svg {
-  width: 32px;
-  height: 32px;
+  width: 28px;
+  height: 28px;
   stroke-width: 1.5;
 }
 
@@ -1247,10 +1247,10 @@ body {
 
 .contact-card-content h4 {
   font-family: "Playfair Display", serif;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 600;
   color: var(--text);
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
 }
 
 .contact-card-content p {
@@ -1264,7 +1264,7 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 18px 40px;
+  padding: 16px 36px;
   background: linear-gradient(135deg, var(--gold-dark), var(--gold));
   color: var(--white);
   text-decoration: none;
@@ -1279,7 +1279,7 @@ body {
   cursor: pointer;
   width: 100%;
   max-width: none;
-  margin: 0 auto;
+  margin: 28px auto 0;
 }
 
 .contact-button:hover {
@@ -1311,37 +1311,37 @@ body {
 /* Card flutuante sobre o mapa */
 .map-card {
   position: absolute;
-  bottom: 28px;
-  left: 28px;
+  bottom: 20px;
+  left: 20px;
   z-index: 10;
   background: rgba(246, 238, 231, 0.95);
-  padding: 20px 24px;
-  border-radius: 14px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
-  max-width: 240px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  max-width: 200px;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(200, 160, 108, 0.2);
 }
 
 .map-card-icon {
-  font-size: 32px;
-  margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 8px;
   color: var(--gold);
 }
 
 .map-card h3 {
   font-family: "Playfair Display", serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   color: var(--text);
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
 }
 
 .map-card p {
-  font-size: 12px;
+  font-size: 11px;
   color: var(--muted);
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .contact-right {
@@ -1365,6 +1365,7 @@ body {
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
   margin-bottom: 40px;
   position: relative;
+  margin-top: 0;
 }
 
 .contact-map-footer {
@@ -1374,7 +1375,7 @@ body {
 .contact-map-text {
   font-size: 16px;
   color: var(--muted);
-  margin: 0 0 12px 0;
+  margin: 0 0 10px 0;
   line-height: 1.7;
   letter-spacing: 0.4px;
   font-weight: 400;
@@ -1382,7 +1383,7 @@ body {
 
 .contact-map-signature {
   font-family: "Herr Von Muellerhoff", cursive;
-  font-size: 28px;
+  font-size: 34px;
   color: var(--gold);
   margin: 0;
   font-weight: 400;
