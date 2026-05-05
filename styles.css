@@ -1123,7 +1123,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 18px auto 8px;
+  margin: 16px auto 8px;
 }
 
 .contact-divider .divider-line {
@@ -1185,14 +1185,14 @@ body {
   gap: 8px;
   padding: 20px 16px;
   background: rgba(255, 255, 255, 0.98);
-  border: 1px solid rgba(200, 160, 108, 0.2);
+  border: 1px solid rgba(200, 160, 108, 0.15);
   border-radius: 18px;
   text-decoration: none;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .contact-card::before {
@@ -1296,10 +1296,10 @@ body {
 /* Decoração de folhas */
 .contact-decoration {
   position: absolute;
-  bottom: -40px;
-  left: -80px;
-  width: 460px;
-  height: 460px;
+  bottom: -60px;
+  left: -60px;
+  width: 440px;
+  height: 440px;
   opacity: 0.2;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cpath d='M100,20 Q80,40 90,70 Q70,60 60,80 Q50,100 70,110 Q80,85 100,90 Q90,120 110,130 Q130,120 140,100 Q150,80 140,60 Q120,50 100,20 Z' fill='%23c8a06c' stroke='%23a67a45' stroke-width='1'/%3E%3Cpath d='M50,150 Q40,160 45,180 Q35,175 30,190 Q25,200 40,205 Q45,185 55,190 Q50,170 50,150 Z' fill='%23c8a06c' opacity='0.6'/%3E%3Cpath d='M150,160 Q140,170 148,190 Q138,185 135,200 Q130,210 145,215 Q148,195 160,200 Q155,180 150,160 Z' fill='%23c8a06c' opacity='0.5'/%3E%3C/svg%3E");
@@ -1311,7 +1311,7 @@ body {
 /* Card flutuante sobre o mapa */
 .map-card {
   position: absolute;
-  bottom: 24px;
+  bottom: 28px;
   left: 20px;
   z-index: 10;
   background: rgba(246, 238, 231, 0.95);
@@ -1355,7 +1355,7 @@ body {
   flex-direction: column;
   height: 100%;
   position: relative;
-  margin-top: 0;
+  margin-top: -140px;
 }
 
 .contact-map {
@@ -1376,7 +1376,7 @@ body {
 .contact-map-text {
   font-size: 15px;
   color: var(--muted);
-  margin: 0 0 8px 0;
+  margin: 0 0 10px 0;
   line-height: 1.6;
   letter-spacing: 0.3px;
   font-weight: 400;
@@ -1384,7 +1384,7 @@ body {
 
 .contact-map-signature {
   font-family: "Herr Von Muellerhoff", cursive;
-  font-size: 32px;
+  font-size: 38px;
   color: var(--gold);
   margin: 0;
   font-weight: 400;
