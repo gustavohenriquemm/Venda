@@ -741,18 +741,20 @@ body {
    ═══════════════════════════════════════════════════════════════════ */
 
 .gallery {
-  padding: 60px 48px;
-  background: linear-gradient(135deg, var(--cream) 0%, var(--beige) 100%);
+  padding: 120px 48px;
+  background: linear-gradient(135deg, var(--cream) 0%, var(--beige) 50%, var(--sand) 100%);
+  position: relative;
 }
 
 .gallery-header {
   text-align: center;
-  margin-bottom: 60px;
-  max-width: 600px;
+  margin-bottom: 80px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Replicando estilos do HERO */
 .gallery-eyebrow {
   font-size: 13px;
   letter-spacing: 0.2em;
@@ -761,10 +763,13 @@ body {
 }
 
 .gallery-title {
+  margin: 12px 0 10px;
   font-family: "Playfair Display", serif;
-  font-size: 48px;
+  font-size: 60px;
   font-weight: 600;
-  margin: 12px 0;
+  line-height: 1.1;
+  position: relative;
+  padding-bottom: 0;
   color: var(--text);
 }
 
@@ -773,11 +778,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin: 16px 0;
+  margin: 18px auto 8px;
 }
 
 .gallery-divider .divider-line {
-  width: 100px;
+  width: 140px;
   height: 2px;
   background: linear-gradient(90deg, var(--gold-dark), var(--gold));
 }
@@ -813,203 +818,68 @@ body {
 .gallery-subtitle {
   margin-top: 12px;
   font-size: 15px;
+  line-height: 1.6;
   color: var(--muted);
   max-width: 420px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Grid Simples e Tradicional - 3 colunas no desktop */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  max-width: 1200px;
+.gallery-wrapper {
+  max-width: 1400px;
   margin: 0 auto;
+  position: relative;
 }
 
-/* Card padrão - Simples e Leve */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+
 .gallery-card {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: 14px;
   overflow: hidden;
-  border-radius: 8px;
-  aspect-ratio: 1;
-  background: white;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
 }
 
 .gallery-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Imagem preenchendo o card sem distorção */
-.gallery-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-/* ═══════════════════════════════════════════════════════════
-   RESPONSIVIDADE
-   ═══════════════════════════════════════════════════════════ */
-
-@media (max-width: 1024px) {
-  .gallery {
-    padding: 50px 40px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery {
-    padding: 45px 32px;
-  }
-
-  .gallery-title {
-    font-size: 36px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery {
-    padding: 40px 24px;
-  }
-
-  .gallery-title {
-    font-size: 28px;
-  }
-
-  .gallery-eyebrow {
-    font-size: 12px;
-  }
-
-  .gallery-subtitle {
-    font-size: 14px;
-  }
-
-  .gallery-grid {
-    grid-template-columns: 1fr;
-    gap: 12px;
-  }
-}
-  opacity: 0;
-  /* Transição fade muito suave: 1 segundo */
-  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
-  pointer-events: none;
-  animation: kenBurnsZoom 8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-/* Imagem ativa com fade in e animação de zoom */
-.gallery-slideshow-image.active {
-  opacity: 1;
-  pointer-events: auto;
-  animation: kenBurnsZoom 7.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-/* Garantir que o overlay fica acima das imagens */
-.gallery-card-overlay {
-  position: absolute;
-  z-index: 10;
-}
-
-/* ═══════════════════════════════════════════════════════════════════
-   💎 VISUAL PREMIUM - Cards elegantes e sofisticados
-   ═══════════════════════════════════════════════════════════════════ */
-
-.gallery-card {
-  /* Bordas suaves e arredondadas */
-  border-radius: 18px;
-  
-  /* Sombra elegante e suave */
-  box-shadow: 
-    0 4px 6px rgba(0, 0, 0, 0.05),
-    0 10px 20px rgba(0, 0, 0, 0.08),
-    0 1px 3px rgba(200, 160, 108, 0.1);
-  
-  /* Transição suave para efeitos de hover */
-  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-  
-  /* Overflow oculto mantido */
-  overflow: hidden;
-  
-  /* Background claro e elegante */
-  background: linear-gradient(135deg, #fafaf8 0%, #f5f3f0 100%);
-}
-
-.gallery-card:hover {
-  /* Elevação suave e elegante */
-  transform: translateY(-8px);
-  
-  /* Sombra aumentada no hover */
-  box-shadow: 
-    0 12px 24px rgba(0, 0, 0, 0.08),
-    0 20px 40px rgba(200, 160, 108, 0.15),
-    0 2px 4px rgba(200, 160, 108, 0.12);
+  box-shadow: 0 20px 45px rgba(200, 160, 108, 0.2);
+  transform: translateY(-12px);
 }
 
 .gallery-card-image {
-  /* Altura balanced para melhor visualização */
-  height: 280px;
-  
-  /* Posicionamento relativo para animações */
   position: relative;
-  
-  /* Fundo elegante */
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
   background: linear-gradient(135deg, var(--cream) 0%, var(--beige) 100%);
-  
-  /* Transição suave */
-  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.gallery-card:hover .gallery-card-image {
-  /* Leve brilho no hover */
-  filter: brightness(1.05);
+.gallery-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery-card-content {
-  /* Padding equilibrado */
-  padding: 18px 14px;
-  
-  /* Background elegante */
-  background: rgba(255, 255, 255, 0.95);
-  
-  /* Transição suave */
-  transition: all 0.4s ease;
+.gallery-card:hover .gallery-card-image img {
+  transform: scale(1.12);
 }
 
-.gallery-card:hover .gallery-card-content {
-  /* Destaque sutil no hover */
-  background: rgba(255, 255, 255, 1);
-}
-
-.gallery-card-content h3 {
-  font-family: "Playfair Display", serif;
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--text);
-  margin: 0;
-  letter-spacing: 0.3px;
-}
-
-/* Overlay premium - Efeito ao passar o mouse */
 .gallery-card-overlay {
+  position: absolute;
   bottom: 16px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.95);
+  width: 48px;
+  height: 48px;
+  background: var(--white);
   border: 2px solid var(--gold);
   border-radius: 50%;
   display: flex;
@@ -1017,12 +887,9 @@ body {
   justify-content: center;
   color: var(--gold);
   opacity: 0;
-  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateX(-50%) translateY(20px);
-  box-shadow: 
-    0 8px 16px rgba(200, 160, 108, 0.2),
-    0 2px 4px rgba(0, 0, 0, 0.08);
-  backdrop-filter: blur(4px);
+  box-shadow: 0 8px 20px rgba(200, 160, 108, 0.25);
 }
 
 .gallery-card-overlay svg {
@@ -1030,7 +897,6 @@ body {
   height: 24px;
   stroke: currentColor;
   stroke-width: 1.5;
-  transition: all 0.4s ease;
 }
 
 .gallery-card:hover .gallery-card-overlay {
@@ -1038,159 +904,18 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-.gallery-card:hover .gallery-card-overlay svg {
-  transform: scale(1.1);
+.gallery-card-content {
+  padding: 20px 16px;
+  text-align: center;
 }
 
-/* ═══════════════════════════════════════════════════════════════════
-   📱 RESPONSIVIDADE - GALERIA PREMIUM
-   ═══════════════════════════════════════════════════════════════════ */
-
-/* Tablets (768px - 1024px) */
-@media (max-width: 1024px) {
-  .gallery-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 22px;
-  }
-  
-  .gallery-card-image {
-    height: 260px;
-  }
-  
-  .gallery-card {
-    border-radius: 16px;
-  }
-}
-
-/* Tablets pequenos (600px - 768px) */
-@media (max-width: 768px) {
-  .gallery {
-    padding: 80px 24px;
-  }
-  
-  .gallery-header {
-    margin-bottom: 60px;
-  }
-  
-  .gallery-title {
-    font-size: 48px;
-  }
-  
-  .gallery-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
-  }
-  
-  .gallery-card-image {
-    height: 240px;
-  }
-  
-  .gallery-card-content {
-    padding: 16px 12px;
-  }
-  
-  .gallery-card-content h3 {
-    font-size: 14px;
-  }
-  
-  .gallery-card {
-    border-radius: 14px;
-  }
-  
-  .gallery-card:hover {
-    transform: translateY(-6px);
-  }
-}
-
-/* Celular (até 600px) */
-@media (max-width: 600px) {
-  .gallery {
-    padding: 60px 16px;
-  }
-  
-  .gallery-header {
-    margin-bottom: 40px;
-    max-width: 100%;
-  }
-  
-  .gallery-eyebrow {
-    font-size: 12px;
-  }
-  
-  .gallery-title {
-    font-size: 36px;
-    margin: 8px 0;
-  }
-  
-  .gallery-divider {
-    gap: 8px;
-    margin: 14px auto 6px;
-  }
-  
-  .gallery-divider .divider-line {
-    width: 100px;
-  }
-  
-  .gallery-subtitle {
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
-  }
-  
-  .gallery-card {
-    border-radius: 12px;
-  }
-  
-  .gallery-card-image {
-    height: 220px;
-  }
-  
-  .gallery-card:hover {
-    transform: translateY(-4px);
-  }
-  
-  .gallery-card-content {
-    padding: 12px 10px;
-  }
-  
-  .gallery-card-content h3 {
-    font-size: 13px;
-  }
-  
-  .gallery-card-overlay {
-    width: 44px;
-    height: 44px;
-    bottom: 12px;
-  }
-  
-  .gallery-card-overlay svg {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-/* Celular muito pequeno (até 380px) */
-@media (max-width: 380px) {
-  .gallery-grid {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 12px;
-  }
-  
-  .gallery-card-image {
-    height: 240px;
-  }
-  
-  .gallery-title {
-    font-size: 32px;
-  }
-  
-  .gallery-grid {
-    gap: 10px;
-  }
+.gallery-card-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  letter-spacing: 0.3px;
 }
 
 /* ═══════════════════════════════════════════════════════════════════
